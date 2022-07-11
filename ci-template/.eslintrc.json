@@ -6,6 +6,8 @@
      "jest": true
   },
   "rules": {
+    "no-tabs": 0,
+    "no-mixed-spaces-and-tabs": 0, // disable rule
     "no-restricted-syntax": [
       "error",
       "LabeledStatement",
