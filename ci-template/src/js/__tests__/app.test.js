@@ -36,6 +36,7 @@ test('Team iterate', () => {
   expect(result).toEqual([char1, char2, char3]);
 });
 
+
 test('add 1 teammate', () => {
   const team = new Team();
   const char1 = {

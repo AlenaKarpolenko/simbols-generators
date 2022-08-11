@@ -1,3 +1,6 @@
+
+
+
 export default class Team {
   constructor() {
     this.members = new Set();
@@ -17,22 +20,10 @@ export default class Team {
     }
   }
 
-  [Symbol.iterator]() {
+  * [Symbol.iterator]() {
     const affiliation = Array.from(this.members.values());
-    let i = 0;
-    return {
-      next() {
-        i += 1;
-        if (i <= affiliation.length) {
-          return {
-            done: false,
-            value: affiliation[i - 1],
-          };
-        }
-        return {
-          done: true,
-        };
-      },
-    };
+    for (let i = 0; i < affiliation.length; i += 1) {
+      yield affiliation[i];
+    }
   }
 }
